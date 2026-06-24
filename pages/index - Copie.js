@@ -1,27 +1,7 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 
 export default function Home() {
-  // Bannière dynamique
-  const banners = [
-    "/images/banner1.jpg",
-    "/images/banner2.jpg",
-    "/images/banner3.jpg",
-    "/images/banner4.jpg",
-    "/images/banner5.jpg",
-  ];
-
-  const [currentBanner, setCurrentBanner] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentBanner((prev) => (prev + 1) % banners.length);
-    }, 5000); // change toutes les 5 secondes
-    return () => clearInterval(interval);
-  }, []);
-
-  // Données des accomplissements
   const accomplished = [
     {
       title: "Merveilleuse Enfance à Oyem",
@@ -43,7 +23,6 @@ export default function Home() {
     },
   ];
 
-  // Données des actions à venir
   const upcoming = [
     {
       month: "Août",
@@ -70,15 +49,7 @@ export default function Home() {
 
   return (
     <Layout>
-      {/* Bannière dynamique */}
-      <section
-        className="hero"
-        style={{
-          backgroundImage: `url(${banners[currentBanner]})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
+      <section className="hero">
         <div className="hero-content">
           <h1>Ensemble pour la réussite</h1>
           <p>
@@ -90,7 +61,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Accomplissements */}
       <section>
         <h2>Nos récents accomplissements</h2>
         <div className="card-grid">
@@ -106,7 +76,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Actions à venir */}
       <section>
         <h2>Nos actions à venir</h2>
         <div className="timeline">
