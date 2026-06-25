@@ -736,3 +736,100 @@ section h2 {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
+/* ------------------------------
+   RESPONSIVE DESIGN
+--------------------------------*/
+
+/* Smartphones et petits écrans */
+@media (max-width: 768px) {
+
+  /* TITRES & TEXTES */
+  h1 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    margin-top: 20px;
+  }
+
+  p, .intro-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* NAVIGATION */
+  header nav {
+    display: none;
+    flex-direction: column;
+    background: var(--primary-color);
+    padding: 1rem;
+  }
+
+  header nav.nav-open {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+
+  .burger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    transition: all 0.3s;
+  }
+
+  /* GRILLES PHOTOS & VIDÉOS */
+  .album-grid {
+    grid-template-columns: 1fr 1fr; /* 2 colonnes sur mobile */
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr; /* 1 vidéo par ligne sur mobile */
+  }
+
+  /* IMAGES */
+  .album-thumb {
+    height: 150px;
+    object-fit: cover;
+  }
+
+  /* VIDÉOS */
+  .video-grid iframe,
+  .video-grid video {
+    height: 200px;
+  }
+
+  /* FOOTER */
+  footer {
+    font-size: 0.85rem;
+    padding: 15px;
+    text-align: center;
+  }
+}
+
+/* Très petits écrans (ex: 400px) */
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  p, .intro-text {
+    font-size: 0.85rem;
+  }
+
+  .album-thumb {
+    height: 120px;
+  }
+
+  .video-grid iframe,
+  .video-grid video {
+    height: 180px;
+  }
+}
