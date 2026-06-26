@@ -13,6 +13,7 @@ export default function Ouverture() {
   return (
     <Layout>
       <section className="formation-section">
+        {/* Fil d’Ariane */}
         <Breadcrumb
           items={[
             { label: "Accueil", link: "/" },
@@ -31,12 +32,18 @@ export default function Ouverture() {
         {/* Album photo interactif */}
         <PhotoAlbum images={images} />
 
-        {/* Vidéo */}
+        {/* Vidéo officielle YouTube */}
+        <h2>🎥 Vidéo de la cérémonie</h2>
         <div className="video-container">
-          <video controls width="100%">
-            <source src="/videos/ouverture.mp4" type="video/mp4" />
-            Votre navigateur ne supporte pas la lecture vidéo.
-          </video>
+          <iframe
+            width="100%"
+            height="400"
+            src="https://www.youtube.com/embed/EdyCzZCDLyY"
+            title="Cérémonie d’ouverture Oyem"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
       </section>
     </Layout>

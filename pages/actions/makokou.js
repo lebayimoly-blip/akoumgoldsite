@@ -20,12 +20,11 @@ export default function Makokou() {
         <li>Développer des AGR durables (savon, manioc, soie).</li>
       </ul>
 
-      <h2>Galerie Photo</h2>
-      <div className="gallery">
-        <img src="/images/makokou1.jpg" alt="Formation Makokou 1" />
-        <img src="/images/makokou2.jpg" alt="Formation Makokou 2" />
-        <img src="/images/makokou3.jpg" alt="Formation Makokou 3" />
-      </div>
+      <p className="intro-text">
+        👉 Forts de la réussite déjà obtenue à <strong>Oyem</strong>, nous souhaitons reproduire 
+        ce modèle à Makokou. Ce projet n’est pas encore réalisé et nous sommes actuellement 
+        à la recherche de <strong>partenaires</strong> pour le mettre en œuvre.
+      </p>
     </Layout>
   );
 }

@@ -18,12 +18,11 @@ export default function Libreville() {
         <li>Promouvoir l’inclusion numérique et l’usage des outils modernes.</li>
       </ul>
 
-      <h2>Galerie Photo</h2>
-      <div className="gallery">
-        <img src="/images/libreville1.jpg" alt="Formation Libreville 1" />
-        <img src="/images/libreville2.jpg" alt="Formation Libreville 2" />
-        <img src="/images/libreville3.jpg" alt="Formation Libreville 3" />
-      </div>
+      <p className="intro-text">
+        👉 Inspirés par le <strong>succès des formations à Oyem</strong>, nous voulons étendre 
+        cette dynamique à Libreville. Ce projet n’est pas encore réalisé et nous sommes 
+        actuellement à la recherche de <strong>partenaires</strong> pour le concrétiser.
+      </p>
     </Layout>
   );
 }

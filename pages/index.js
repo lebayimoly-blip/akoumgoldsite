@@ -17,7 +17,7 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBanner((prev) => (prev + 1) % banners.length);
-    }, 5000); // change toutes les 5 secondes
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -103,6 +103,22 @@ export default function Home() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* Témoignages */}
+      <section>
+        <h2>Nos Témoignages</h2>
+        <p className="intro-text">
+          Découvrez les témoignages des bénéficiaires et des partenaires qui
+          partagent leurs expériences et impressions. Ces récits reflètent
+          l’impact réel de nos actions sur le terrain et la transformation
+          vécue par les communautés.
+        </p>
+        <div className="video-grid">
+          <iframe src="https://www.youtube.com/embed/aqjOFoW6TZc" title="Témoignage 1" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          <iframe src="https://www.youtube.com/embed/Z6WYMYElxm4" title="Témoignage 2" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          <iframe src="https://www.youtube.com/embed/6ypYlIpW8Pg" title="Témoignage 3" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         </div>
       </section>
 

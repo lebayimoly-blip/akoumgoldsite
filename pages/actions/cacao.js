@@ -19,13 +19,6 @@ export default function Cacao() {
         <li>Renforcer les compétences techniques des producteurs.</li>
         <li>Favoriser l’accès aux marchés nationaux et internationaux.</li>
       </ul>
-
-      <h2>Galerie Photo</h2>
-      <div className="gallery">
-        <img src="/images/cacao1.jpg" alt="Culture cacao 1" />
-        <img src="/images/cacao2.jpg" alt="Culture cacao 2" />
-        <img src="/images/cacao3.jpg" alt="Culture cacao 3" />
-      </div>
     </Layout>
   );
 }
