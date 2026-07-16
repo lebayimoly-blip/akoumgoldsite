@@ -31,9 +31,32 @@ export default function Ateliers() {
         {/* Album photo interactif */}
         <PhotoAlbum images={images} />
 
+        {/* Atelier Alphabétisation fonctionnelle */}
+        <div className="atelier-block">
+          <h2>📚 Atelier Alphabétisation fonctionnelle</h2>
+          <p className="video-description">
+            Formation animée par <strong>Madame Patrice ONGUENE</strong>, visant
+            à renforcer les compétences de base en lecture, écriture et calcul.
+            Ce module permet aux participantes de mieux comprendre les documents
+            administratifs, de gérer leurs activités et de développer une
+            autonomie essentielle pour l’entrepreneuriat.
+          </p>
+          <div className="video-row">
+            <iframe
+              width="48%"
+              height="300"
+              src="https://www.youtube.com/embed/I_ZTMGTbVi4"
+              title="Atelier Alphabétisation fonctionnelle"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+
         {/* Atelier Savonnerie artisanale */}
         <div className="atelier-block">
-          <h2>🎥 Atelier Savonnerie artisanale</h2>
+          <h2>🧼 Atelier Savonnerie artisanale</h2>
           <p className="video-description">
             Formation pratique animée par l’expert Alain Moussavou, initiant les
             participantes à la fabrication de savons naturels à base de peau de

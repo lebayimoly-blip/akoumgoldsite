@@ -125,6 +125,12 @@ export default function Home() {
       {/* Actions à venir */}
       <section>
         <h2>Nos actions à venir</h2>
+        <p className="intro-text">
+          Nous avons besoin de vous — sponsors, partenaires et bienfaiteurs — 
+          pour rendre possibles ces programmes. Votre soutien permettra aux femmes 
+          et aux communautés de transformer leurs compétences en véritables 
+          opportunités économiques et sociales durables.
+        </p>
         <div className="timeline">
           {upcoming.map((action, index) => (
             <div key={index} className="timeline-item">
@@ -140,6 +146,16 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Bouton formations pratiques */}
+        <div className="cta-container">
+          <a 
+            href="http://172.16.0.2:3000/formation/ateliers" 
+            className="hero-button"
+          >
+            Voir nos dernières formations pratiques
+          </a>
         </div>
       </section>
     </Layout>
