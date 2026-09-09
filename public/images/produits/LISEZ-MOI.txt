@@ -1,0 +1,22 @@
+PHOTOS DE LA BOUTIQUE — ONG Akoum Gold
+======================================
+
+Déposez ici les 5 photos, avec EXACTEMENT ces noms de fichier :
+
+  savon-citron.jpg     -> flacon VIOLET  (parfum Citron)
+  savon-lavande.jpg    -> flacon ROSE    (parfum Lavande)
+  savon-ocean.jpg      -> flacon BLEU    (Fraîcheur Océan)
+  amidon-manioc.jpg    -> sachet d'amidon de manioc
+  chips-banane.jpg     -> barquette de chips de banane
+
+- Format .jpg (ou renommez l'extension dans data/produits.js si .png).
+- Idéalement carré ou proche du carré ; le site recadre et centre automatiquement.
+- Tant qu'une photo est absente, la carte affiche un cadre "Photo à venir"
+  (pas d'image cassée) — vous pouvez donc les ajouter une par une.
+
+Rendu "vitrine" : le site place chaque photo sur un fond dégradé studio,
+avec ombre portée et léger zoom au survol. Aucune retouche n'est nécessaire,
+mais une photo détourée (fond blanc/transparent) donnera le meilleur effet.
+
+Pour changer un prix, un nom de parfum, un texte ou le numéro WhatsApp :
+  frontend/data/produits.js

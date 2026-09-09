@@ -17,6 +17,7 @@ export default function Header() {
           <li><Link href="/about">Qui sommes-nous</Link></li>
           <li><Link href="/missions">Nos Missions</Link></li>
           <li><Link href="/impact">Impact</Link></li>
+          <li><Link href="/boutique" className="nav-shop">Boutique</Link></li>
           <li><Link href="/soutenir">Nous soutenir</Link></li>
           <li><Link href="/contact">Contact</Link></li>
         </ul>

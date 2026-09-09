@@ -1,6 +1,8 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import ProductCard from "../components/ProductCard";
+import { PRODUITS } from "../data/produits";
 
 export default function Home() {
   // Bannière dynamique
@@ -103,6 +105,23 @@ export default function Home() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* Boutique solidaire */}
+      <section className="shop-section shop-home">
+        <h2>Nos produits à acheter</h2>
+        <p className="intro-text">
+          La Boutique solidaire d’Akoum Gold&nbsp;: des produits fabriqués par les femmes
+          d’Oyem. Chaque achat finance directement leurs activités génératrices de revenus.
+        </p>
+        <div className="product-grid">
+          {PRODUITS.map((p) => (
+            <ProductCard key={p.id} produit={p} />
+          ))}
+        </div>
+        <div className="cta-container">
+          <Link href="/boutique" className="hero-button">Voir toute la boutique</Link>
         </div>
       </section>
 
