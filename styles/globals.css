@@ -1123,3 +1123,107 @@ section h2 {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==============================
+   ÉVÉNEMENT EN VEDETTE (accueil)
+================================= */
+.event-highlight {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.event-highlight-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1.4fr;
+  gap: 30px;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(0, 64, 128, 0.06), rgba(242, 169, 0, 0.08));
+  border: 1px solid rgba(0, 64, 128, 0.12);
+  border-radius: 20px;
+  padding: 26px;
+}
+
+.event-photo {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(160deg, #f3f5f8, #dfe4ea);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.event-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-photo.no-photo::after {
+  content: "Photo à venir";
+  color: #9aa4b2;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.event-eyebrow {
+  display: inline-block;
+  background: var(--accent-color);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.event-content h2 {
+  margin: 0 0 10px;
+  text-align: left;
+}
+
+.event-stats-row {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.event-stats-row li {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  color: var(--text-color);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.event-stats-row strong {
+  color: var(--primary-color);
+  margin-right: 4px;
+}
+
+.event-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+@media (max-width: 768px) {
+  .event-highlight-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* La page dédiée /evenements/kits-scolaires et son formulaire de don ont
+   leur propre design (styles/EvenementKitsScolaires.module.css et
+   styles/DonationForm.module.css) — ces règles ne sont plus utilisées ici. */

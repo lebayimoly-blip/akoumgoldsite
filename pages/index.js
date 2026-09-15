@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import ProductCard from "../components/ProductCard";
 import { PRODUITS } from "../data/produits";
+import EventTeaser from "../components/EventTeaser";
+import { EVENEMENTS } from "../data/evenements";
 
 export default function Home() {
   // Bannière dynamique
@@ -91,6 +93,11 @@ export default function Home() {
           <a href="/soutenir" className="hero-button">Nous soutenir</a>
         </div>
       </section>
+
+      {/* Événement en cours */}
+      {EVENEMENTS.map((ev) => (
+        <EventTeaser key={ev.id} evenement={ev} />
+      ))}
 
       {/* Accomplissements */}
       <section>

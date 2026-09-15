@@ -1,0 +1,15 @@
+PHOTO DE L'ÉVÉNEMENT — Distribution de kits scolaires 2026-2027
+=================================================================
+
+Déposez ici le visuel (l'affiche jointe) sous le nom exact :
+
+  kits-scolaires.jpg
+
+Il sert à la fois pour la vignette sur la page d'accueil et pour la bannière
+de la page dédiée (/evenements/kits-scolaires). Tant qu'il est absent, un
+cadre "Photo à venir" s'affiche sur l'accueil et la bannière garde un fond
+bleu institutionnel uni sur la page dédiée — rien n'est cassé.
+
+Pour changer le texte, les chiffres, le contenu du kit ou les infos de don
+(numéro Airtel Money, numéro WhatsApp de confirmation) :
+  frontend/data/evenements.js
