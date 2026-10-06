@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import Head from 'next/head';
 import { Poppins } from 'next/font/google';
 
 // Police dédiée à la page événement "Kits scolaires" (var CSS globale,
@@ -14,6 +15,13 @@ const poppins = Poppins({
 export default function MyApp({ Component, pageProps }) {
   return (
     <div className={poppins.variable}>
+      <Head>
+        {/* Vérification Google Search Console */}
+        <meta
+          name="google-site-verification"
+          content="AXgiQlK9KPNn7dnMX4CK4aKDJHLVZsqPAhn64wOktrA"
+        />
+      </Head>
       <Component {...pageProps} />
     </div>
   );
