@@ -181,7 +181,7 @@ export default function Home() {
         {/* Bouton formations pratiques */}
         <div className="cta-container">
           <a 
-            href="http://172.16.0.2:3000/formation/ateliers" 
+            href="/formation/ateliers" 
             className="hero-button"
           >
             Voir nos dernières formations pratiques

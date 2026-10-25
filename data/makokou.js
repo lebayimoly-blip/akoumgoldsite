@@ -8,6 +8,8 @@
 // INSCRIPTIONS : enregistrées dans Supabase (projet « akoum-gold »,
 // table « inscriptions_makokou ») — voir utils/inscriptionsMakokou.js.
 
+import { SITE_URL } from "../utils/site";
+
 export const PROJET = {
   titre: "100 femmes et jeunes filles de Makokou",
   intitule: "Projet d’autonomisation économique des femmes et des jeunes de Makokou – 2026",
@@ -24,8 +26,8 @@ export const PROJET = {
   // Numéro (format international, sans « + ») qui reçoit les messages WhatsApp
   whatsapp: "24166052562",
   email: "ongakoumdor@gmail.com",
-  urlPage: "https://akoumgoldweb.onrender.com/makokou",
-  urlInscription: "https://akoumgoldweb.onrender.com/makokou/inscription",
+  urlPage: `${SITE_URL}/makokou`,
+  urlInscription: `${SITE_URL}/makokou/inscription`,
   sponsor: { nom: "Capital", logo: "/images/makokou/capital.png" },
 };
 

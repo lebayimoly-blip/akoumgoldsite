@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://akoumgoldweb.onrender.com/sitemap.xml
+Sitemap: https://ong-akoumgold.olouomolab.com/sitemap.xml

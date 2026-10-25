@@ -4,6 +4,7 @@ import Layout from "../../components/Layout";
 import InscriptionMakokouForm from "../../components/InscriptionMakokouForm";
 import PlacesRestantesMakokou from "../../components/PlacesRestantesMakokou";
 import { PROJET, lienWhatsAppInscription } from "../../data/makokou";
+import { SITE_URL } from "../../utils/site";
 import styles from "../../styles/ProjetMakokou.module.css";
 import { FaArrowLeft, FaGift, FaClock, FaCalendarAlt, FaUsers, FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 
@@ -21,7 +22,7 @@ export default function InscriptionMakokou() {
         <meta property="og:title" content="Inscription — 100 femmes et jeunes filles de Makokou" key="og:title" />
         <meta property="og:description" content={DESCRIPTION} key="og:description" />
         <meta property="og:url" content={PROJET.urlInscription} key="og:url" />
-        <meta property="og:image" content="https://akoumgoldweb.onrender.com/images/makokou/og-makokou.jpg" key="og:image" />
+        <meta property="og:image" content={`${SITE_URL}/images/makokou/og-makokou.jpg`} key="og:image" />
         <meta property="og:image:width" content="1200" key="og:image:width" />
         <meta property="og:image:height" content="630" key="og:image:height" />
         <meta property="og:locale" content="fr_FR" key="og:locale" />

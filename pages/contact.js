@@ -1,33 +1,40 @@
 import Layout from "../components/Layout";
 import { useState } from "react";
-import { API_URL } from "../utils/api";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [botField, setBotField] = useState(""); // anti-robots : doit rester vide
   const [status, setStatus] = useState("");
+  const [envoi, setEnvoi] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  // Envoi via Netlify Forms : les messages arrivent dans Netlify (onglet Forms)
+  // avec une notification par e-mail. Le formulaire est déclaré dans public/__forms.html.
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (envoi) return;
+    setEnvoi(true);
+    setStatus("⏳ Envoi en cours…");
     try {
-      const res = await fetch(`${API_URL}/api/contact`, {
+      const res = await fetch("/__forms.html", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({ "form-name": "contact", "bot-field": botField, ...form }).toString(),
       });
 
-      const data = await res.json();
-      if (data.success) {
-        setStatus("✅ Message envoyé avec succès !");
+      if (res.ok) {
+        setStatus("✅ Message envoyé avec succès ! Nous vous répondrons rapidement.");
         setForm({ name: "", email: "", subject: "", message: "" });
       } else {
-        setStatus("❌ Erreur lors de l'envoi du message.");
+        setStatus("❌ Erreur lors de l'envoi du message. Merci de réessayer.");
       }
     } catch (error) {
-      setStatus("⚠️ Impossible de contacter le serveur.");
+      setStatus("⚠️ Connexion impossible. Vérifiez votre connexion internet et réessayez.");
+    } finally {
+      setEnvoi(false);
     }
   };
 
@@ -60,6 +67,12 @@ export default function Contact() {
 
       {/* Formulaire */}
       <form onSubmit={handleSubmit} className="contact-form">
+        {/* Anti-robots (invisible pour les visiteurs) */}
+        <p hidden aria-hidden="true">
+          <label>
+            Ne pas remplir : <input name="bot-field" value={botField} onChange={(e) => setBotField(e.target.value)} tabIndex={-1} autoComplete="off" />
+          </label>
+        </p>
         <input
           type="text"
           name="name"
@@ -91,7 +104,7 @@ export default function Contact() {
           onChange={handleChange}
           required
         />
-        <button type="submit">Envoyer</button>
+        <button type="submit" disabled={envoi}>{envoi ? "Envoi…" : "Envoyer"}</button>
       </form>
 
       <p className="status">{status}</p>
