@@ -13,15 +13,15 @@
 export const EVENEMENTS = [
   {
     id: "kits-scolaires",
-    eyebrow: "Événement en cours",
+    eyebrow: "Action réalisée",
     titre: "Distribution de kits scolaires — Rentrée 2026-2027",
     sousTitre: "De la maternelle à la 5ᵉ année",
     partenaires: ["2M Consulting", "Women In Logistics Africa", "ONG Akoum Gold"],
     image: "/images/evenements/kits-scolaires.jpg",
     resume:
-      "300 enfants d'Oyem, de la maternelle à la 5ᵉ année, recevront un kit scolaire complet et adapté à leur niveau pour la rentrée 2026-2027. Offrons un avenir meilleur à chaque enfant.",
+      "300 enfants d'Oyem, de la maternelle à la 5ᵉ année, ont reçu un kit scolaire complet et adapté à leur niveau pour la rentrée 2026-2027. Merci à nos partenaires et à tous les donateurs !",
     objectif:
-      "Accompagner 300 enfants pour une rentrée scolaire dans de meilleures conditions.",
+      "Objectif atteint : 300 enfants accompagnés pour une rentrée scolaire dans de meilleures conditions.",
     stats: [
       { chiffre: "300", label: "enfants bénéficiaires" },
       { chiffre: "150", label: "filles" },

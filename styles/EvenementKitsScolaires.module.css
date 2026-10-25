@@ -77,6 +77,7 @@
 
 .heroTitle {
   margin: 20px 0 8px;
+  color: #fff;
   font-weight: 800;
   line-height: 1.05;
   font-size: clamp(2.1rem, 4.2vw, 3.4rem);
@@ -403,6 +404,7 @@
 
 .ctaBanner h2 {
   margin: 0 0 24px;
+  color: #fff;
   font-size: clamp(1.3rem, 2.6vw, 1.9rem);
   font-weight: 800;
   max-width: 620px;

@@ -1,5 +1,5 @@
 import Layout from "../../components/Layout";
-import DonationForm from "../../components/DonationForm";
+import Link from "next/link";
 import { getEvenement } from "../../data/evenements";
 import styles from "../../styles/EvenementKitsScolaires.module.css";
 import {
@@ -54,12 +54,12 @@ export default function KitsScolaires() {
               <p className={styles.heroLead}>{evenement.resume}</p>
 
               <div className={styles.heroActions}>
-                <a href="#don" className={styles.btnGold}>
-                  Faire un don <FaArrowRight />
+                <a href="#kit" className={styles.btnGold}>
+                  Voir le contenu du kit <FaArrowRight />
                 </a>
-                <a href="#kit" className={styles.btnGhost}>
-                  Voir le contenu du kit
-                </a>
+                <Link href="/soutenir" className={styles.btnGhost}>
+                  Soutenir nos prochaines actions
+                </Link>
               </div>
             </div>
 
@@ -120,7 +120,7 @@ export default function KitsScolaires() {
 
         {/* CONTENU DU KIT */}
         <section id="kit" className={styles.kit}>
-          <h2 className={styles.sectionTitle}>Chaque enfant reçoit un kit complet</h2>
+          <h2 className={styles.sectionTitle}>Chaque enfant a reçu un kit complet</h2>
           <p className={styles.sectionLead}>Adapté à son niveau, de la maternelle à la 5ᵉ année.</p>
 
           <div className={styles.kitGrid}>
@@ -138,17 +138,15 @@ export default function KitsScolaires() {
           </div>
         </section>
 
-        {/* BANDEAU AVANT LE DON */}
+        {/* REMERCIEMENTS */}
         <section className={styles.ctaBanner}>
           <FaHandHoldingHeart className={styles.ctaIcon} />
-          <h2>Offrons un avenir meilleur à chaque enfant.</h2>
-          <a href="#don" className={styles.btnGold}>
-            Je fais un don <FaArrowRight />
-          </a>
+          <h2>Merci à nos partenaires et à tous nos donateurs !</h2>
+          <Link href="/soutenir" className={styles.btnGold}>
+            Soutenir nos prochaines actions <FaArrowRight />
+          </Link>
         </section>
       </div>
-
-      <DonationForm evenement={evenement} />
     </Layout>
   );
 }

@@ -3,8 +3,6 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import ProductCard from "../components/ProductCard";
 import { PRODUITS } from "../data/produits";
-import EventTeaser from "../components/EventTeaser";
-import { EVENEMENTS } from "../data/evenements";
 import MakokouTeaser from "../components/MakokouTeaser";
 
 export default function Home() {
@@ -28,6 +26,12 @@ export default function Home() {
 
   // Données des accomplissements
   const accomplished = [
+    {
+      title: "Distribution de kits scolaires à Oyem",
+      description: "300 enfants d’Oyem, de la maternelle à la 5ᵉ année, ont reçu un kit scolaire complet pour la rentrée 2026-2027.",
+      image: "/images/evenements/kits-scolaires-carte.jpg",
+      link: "/evenements/kits-scolaires"
+    },
     {
       title: "Merveilleuse Enfance à Oyem",
       description: "Grande fête dédiée aux enfants vulnérables avec activités récréatives et distributions de cadeaux.",
@@ -97,11 +101,6 @@ export default function Home() {
 
       {/* Inscriptions ouvertes : projet Makokou */}
       <MakokouTeaser />
-
-      {/* Événement en cours */}
-      {EVENEMENTS.map((ev) => (
-        <EventTeaser key={ev.id} evenement={ev} />
-      ))}
 
       {/* Accomplissements */}
       <section>
