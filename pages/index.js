@@ -5,6 +5,7 @@ import ProductCard from "../components/ProductCard";
 import { PRODUITS } from "../data/produits";
 import EventTeaser from "../components/EventTeaser";
 import { EVENEMENTS } from "../data/evenements";
+import MakokouTeaser from "../components/MakokouTeaser";
 
 export default function Home() {
   // Bannière dynamique
@@ -57,11 +58,11 @@ export default function Home() {
       link: "/actions/cacao"
     },
     {
-      month: "Septembre",
-      title: "Formation aux AGR de 100 femmes à Makokou",
-      description: "Renforcement des compétences entrepreneuriales des femmes de Makokou.",
+      month: "Novembre",
+      title: "Formation de 100 femmes et jeunes filles à Makokou",
+      description: "Inscriptions ouvertes : savon, manioc, vers à soie, numérique & IA, gestion financière et prise de parole.",
       image: "/images/makokou.jpg",
-      link: "/actions/makokou"
+      link: "/makokou"
     },
     {
       month: "Octobre",
@@ -93,6 +94,9 @@ export default function Home() {
           <a href="/soutenir" className="hero-button">Nous soutenir</a>
         </div>
       </section>
+
+      {/* Inscriptions ouvertes : projet Makokou */}
+      <MakokouTeaser />
 
       {/* Événement en cours */}
       {EVENEMENTS.map((ev) => (
