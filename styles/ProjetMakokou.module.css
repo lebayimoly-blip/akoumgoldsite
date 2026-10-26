@@ -1380,6 +1380,46 @@
   gap: 4px;
 }
 
+.groupCard {
+  max-width: 420px;
+  margin: 0 auto 14px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  text-align: left;
+  background: #e9f7ef;
+  border: 1px solid #bfe6cd;
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+.groupIcon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #1fae55;
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+.groupCard strong {
+  display: block;
+  color: var(--green);
+  font-size: 0.95rem;
+  line-height: 1.35;
+  margin-bottom: 4px;
+}
+
+.groupCard p {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: #34433a;
+}
+
 .successActions {
   display: grid;
   gap: 10px;
@@ -1532,5 +1572,201 @@
   .btnOutline,
   .btnWhatsapp {
     transition: none;
+  }
+}
+
+/* =====================================================
+   PAGE PRIVÉE /makokou/admin
+===================================================== */
+.adminLayout {
+  max-width: 1180px;
+  margin: -66px auto 0;
+  padding: 0 20px 72px;
+  position: relative;
+  z-index: 2;
+}
+
+.adminLogin {
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.adminToolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.adminActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.adminActions .btnGold,
+.adminActions .btnOutline {
+  padding: 11px 18px;
+  font-size: 0.92rem;
+}
+
+.adminActions .btnGold:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.adminActions .linkButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.adminStats {
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.adminStats li {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 0.86rem;
+  color: #34433a;
+}
+
+.adminStats strong {
+  color: var(--green);
+  margin-right: 4px;
+}
+
+.adminAteliers {
+  margin: 0 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0 16px;
+}
+
+.adminAteliers summary {
+  cursor: pointer;
+  padding: 12px 0;
+  font-weight: 700;
+  color: var(--green);
+  font-size: 0.92rem;
+}
+
+.adminAteliers ul {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 6px 18px;
+}
+
+.adminAteliers li {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 0.88rem;
+  padding: 6px 0;
+  border-bottom: 1px dashed var(--line);
+}
+
+.adminAteliers li strong {
+  color: var(--green);
+}
+
+.adminSearch {
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.adminSearch svg {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+}
+
+.adminSearch .input {
+  padding-left: 40px;
+}
+
+.adminTableWrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.adminTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+  min-width: 960px;
+}
+
+.adminTable th {
+  position: sticky;
+  top: 0;
+  background: var(--green);
+  color: #fff;
+  text-align: left;
+  font-weight: 700;
+  padding: 10px 12px;
+  white-space: nowrap;
+}
+
+.adminTable td {
+  padding: 10px 12px;
+  border-top: 1px solid var(--line);
+  vertical-align: top;
+  color: #2c3b31;
+}
+
+.adminTable tbody tr:nth-child(even) td {
+  background: #fafcf9;
+}
+
+.adminTable td a {
+  color: var(--green);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.adminMotivation {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: var(--muted);
+  max-width: 280px;
+}
+
+.adminRowOff td {
+  opacity: 0.45;
+  text-decoration: line-through;
+}
+
+@media (max-width: 640px) {
+  .adminLayout {
+    padding: 0 12px 52px;
+  }
+
+  .adminActions {
+    width: 100%;
+  }
+
+  .adminActions .btnGold,
+  .adminActions .btnOutline {
+    flex: 1 1 auto;
   }
 }

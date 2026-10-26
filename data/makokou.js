@@ -25,6 +25,9 @@ export const PROJET = {
   ],
   // Numéro (format international, sans « + ») qui reçoit les messages WhatsApp
   whatsapp: "24166052562",
+  // Lien d'invitation du groupe WhatsApp du projet (https://chat.whatsapp.com/...).
+  // Affiché juste après l'inscription. Laisser vide ("") pour masquer le bouton.
+  groupeWhatsApp: "https://chat.whatsapp.com/GFSzwdXVcUKHSj2rpv3RUe",
   email: "ongakoumdor@gmail.com",
   urlPage: `${SITE_URL}/makokou`,
   urlInscription: `${SITE_URL}/makokou/inscription`,

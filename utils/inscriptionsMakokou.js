@@ -64,3 +64,26 @@ export async function enregistrerInscription(inscription) {
   if (res.status === 400) return { ok: false, raison: "invalide" };
   return { ok: false, raison: "serveur" };
 }
+
+// Liste des inscrits pour la page privée /makokou/admin.
+// Le mot de passe est vérifié côté base (fonction liste_inscriptions_makokou).
+// Retourne { ok: true, inscriptions, genere_le } ou { ok: false, raison }.
+export async function listerInscriptions(motDePasse) {
+  let res;
+  try {
+    res = await fetchAvecDelai(
+      `${SUPABASE_URL}/rest/v1/rpc/liste_inscriptions_makokou`,
+      { method: "POST", headers: HEADERS, body: JSON.stringify({ mot_de_passe: motDePasse }) },
+      20000
+    );
+  } catch {
+    return { ok: false, raison: "reseau" };
+  }
+  if (!res.ok) return { ok: false, raison: "serveur" };
+  try {
+    const data = await res.json();
+    return data && typeof data === "object" ? data : { ok: false, raison: "serveur" };
+  } catch {
+    return { ok: false, raison: "serveur" };
+  }
+}

@@ -7,8 +7,10 @@ import {
   FaInfoCircle,
   FaShareAlt,
   FaArrowRight,
+  FaUsers,
 } from "react-icons/fa";
 import {
+  PROJET,
   ATELIERS,
   lienWhatsAppInscription,
   lienWhatsAppConfirmation,
@@ -143,22 +145,43 @@ export default function InscriptionMakokouForm() {
             <span><strong>Ateliers :</strong> {envoyee.ateliers.join(", ")}</span>
           </div>
 
+          {PROJET.groupeWhatsApp && (
+            <div className={styles.groupCard}>
+              <span className={styles.groupIcon}><FaUsers /></span>
+              <div>
+                <strong>Dernière étape : rejoignez le groupe WhatsApp du projet</strong>
+                <p>C’est par ce groupe que l’ONG Akoum Gold partagera les informations de la formation.</p>
+              </div>
+            </div>
+          )}
+
           <div className={styles.successActions}>
+            {PROJET.groupeWhatsApp ? (
+              <a
+                href={PROJET.groupeWhatsApp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.btnWhatsapp}
+              >
+                <FaWhatsapp /> Rejoindre le groupe WhatsApp
+              </a>
+            ) : (
+              <a
+                href={lienWhatsAppConfirmation(envoyee)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.btnWhatsapp}
+              >
+                <FaWhatsapp /> Prévenir l’ONG sur WhatsApp (facultatif)
+              </a>
+            )}
             <a
               href={lienPartageWhatsApp()}
               target="_blank"
               rel="noopener noreferrer"
-              className={styles.btnWhatsapp}
-            >
-              <FaShareAlt /> Partager avec une amie
-            </a>
-            <a
-              href={lienWhatsAppConfirmation(envoyee)}
-              target="_blank"
-              rel="noopener noreferrer"
               className={styles.btnOutline}
             >
-              <FaWhatsapp /> Prévenir l’ONG sur WhatsApp (facultatif)
+              <FaShareAlt /> Partager avec une amie
             </a>
             <button type="button" className={styles.linkButton} onClick={recommencer}>
               Inscrire une autre personne
@@ -188,6 +211,16 @@ export default function InscriptionMakokouForm() {
             <strong>Vous êtes déjà inscrit(e)</strong> avec ce nom et ce numéro de téléphone. Inutile de
             recommencer : l’ONG Akoum Gold vous recontactera.
             <div className={styles.alertActions}>
+              {PROJET.groupeWhatsApp && (
+                <a
+                  href={PROJET.groupeWhatsApp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.btnWhatsapp}
+                >
+                  <FaWhatsapp /> Rejoindre le groupe WhatsApp
+                </a>
+              )}
               <button type="button" className={styles.btnOutline} onClick={recommencer}>
                 Inscrire une autre personne
               </button>
